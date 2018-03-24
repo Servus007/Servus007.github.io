@@ -195,7 +195,6 @@
 						<div class="col-md-3">
 							<h3 class="section-title">Please feel free to share a comment, remark or ask a question!</h3>
 							<form class="contact-form">
-								<form.id ="contact-form" method="post" action="contact-form.php">
 								<div class="form-group">
 									<label for="name" class="sr-only">Name</label>
 									<input type="name" class="form-control" id="name" placeholder="Name">
@@ -212,6 +211,18 @@
 									<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
 								</div>
 							</form>
+							<?php
+								if(isset($_POST['submit']))
+								{
+									$name = $_POST['name'];
+									$email = $_POST['email'];
+									$message = $_POST['message'];
+									$adminwebsite = "info@lovaniadrones.be";
+					
+										$headers="Reply-to:$email;
+										mail($adminwebsite,$name,$message,$headers);
+								}
+							?>
 						</div>
 					</div>
 					<div class="row copy-right">
