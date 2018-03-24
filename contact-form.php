@@ -1,7 +1,7 @@
 <?php
 	$name = $_Post['name'];
 	$bezoeker_email = $_Post['email'];
-	$message = $_Post['mesage'];
+	$message = $_Post['message'];
 	
 	$email_mij = 'info@lovaniadrones.be'
 	
